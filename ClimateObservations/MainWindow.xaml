@@ -1,0 +1,53 @@
+﻿<Window x:Class="ClimateObservations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClimateObservations"
+        mc:Ignorable="d"
+        Title="Klimatobservationer" Height="500" Width="800">
+    <Grid>
+        <Label FontWeight="Bold"  Content="Klimatobservatörer" HorizontalAlignment="Left" Height="25" Margin="28,13,0,0" VerticalAlignment="Top" Width="184"/>
+        <ListBox x:Name="lstbxAllObservers" HorizontalAlignment="Left" Height="172" Margin="28,35,0,0" VerticalAlignment="Top" Width="202" SelectionChanged="SelectedObserver"/>
+        <Button x:Name="btnDeleteObserver" Content="Radera klimatobservatör" HorizontalAlignment="Left" Margin="97,212,0,0" VerticalAlignment="Top" Click="DeleteObserver"/>
+
+        <Label FontWeight="Bold" Content="Registrera ny klimatobservatör" HorizontalAlignment="Left" Height="34" Margin="28,276,0,0" VerticalAlignment="Top" Width="184"/>
+        <TextBox x:Name="txtFirstname" HorizontalAlignment="Left" Height="22" Margin="121,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+
+        <Label Content="Förnamn" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="67" Margin="39,306,0,0"/>
+        <TextBox x:Name="txtLastname" HorizontalAlignment="Left" Height="22" Margin="121,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+
+        <Label Content="Efternamn" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="67" Margin="39,337,0,0"/>
+        <Button x:Name="btnNewObserver" Content="Registrera" HorizontalAlignment="Left" Margin="202,368,0,0" VerticalAlignment="Top" Click="NewObserver"/>
+
+        <Label FontWeight="Bold"  Content="Skapa klimatobservation" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="154" Margin="289,12,0,0"/>
+        <Label FontWeight="Bold"  Content="Klimatobservatör" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="120" Margin="289,51,0,0"/>
+        <Label x:Name="lblCurrObserver" Content="Välj en från listan Klimatobservatörer" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="210" Margin="289,77,0,0"/>
+        <Label x:Name="lblCurrObservationHeader" Visibility="Visible" FontWeight="Bold"  Content="Aktuella klimatobservationer" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="194" Margin="539,51,0,0"/>
+        <ListBox x:Name="lstbxCurrentObservation" HorizontalAlignment="Left" Height="61" Margin="539,77,0,0" VerticalAlignment="Top" Width="194" SelectionChanged="SelectedObservation"/>
+        <ListBox x:Name="lstbxMeasurement" HorizontalAlignment="Left" Height="61" Margin="539,170,0,0" VerticalAlignment="Top" Width="194" MouseDoubleClick="SelectedMeasurement"/>
+        <Label x:Name="lblMeasurement" FontWeight="Bold"  Content="Mätvärden" HorizontalAlignment="Left" Height="25" Margin="539,138,0,0" VerticalAlignment="Top" Width="184"/>
+        <ListBox x:Name="lstbxGeolocation" HorizontalAlignment="Left" Height="61" Margin="289,146,0,0" VerticalAlignment="Top" Width="192"/>
+        <Label FontWeight="Bold"  Content="Geopunkt" HorizontalAlignment="Left" Height="25" Margin="289,121,0,0" VerticalAlignment="Top" Width="184"/>
+        <Button x:Name="btnSaveObservation" Content="Skapa observation" HorizontalAlignment="Left" Margin="382,212,0,0" VerticalAlignment="Top" Click="CreateObservation"/>
+
+        <Label FontWeight="Bold"  Content="Lägg till/redigera mätvärde" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="193" Margin="539,276,0,0"/>
+        <ListBox x:Name="lstbxCategory" HorizontalAlignment="Left" Height="61" Margin="539,332,0,0" VerticalAlignment="Top" Width="193" MouseDoubleClick="ChooseCategory"/>
+        <Button x:Name="btnBack" Content="Backa" HorizontalAlignment="Left" Margin="737,373,0,0" VerticalAlignment="Top" Click="ResetCategory"/>
+        <Label FontWeight="Bold"  Content="Kategori" HorizontalAlignment="Left" Height="25" Margin="539,306,0,0" VerticalAlignment="Top" Width="104"/>
+
+        <Button x:Name="btnSaveMeasurement" Content="Lägg till" HorizontalAlignment="Left" Margin="539,425,0,0" VerticalAlignment="Top" Click="AddMeasurement"/>
+        <Label x:Name="lblUnit" HorizontalAlignment="Left" Height="25" Margin="660,398,0,0" VerticalAlignment="Top" Width="73"/>
+        <TextBox x:Name="txtValue" HorizontalAlignment="Left" Margin="539,402,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnEditMeasurement" Content="Redigera" HorizontalAlignment="Left" Margin="592,425,0,0" VerticalAlignment="Top" Click="EditMeasurement"/>
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
